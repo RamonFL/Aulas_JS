@@ -12,8 +12,9 @@ form.addEventListener("submit", function(ev){
     const observations  = document.querySelector("textarea[name = 'observations']").value
 
     let salad = ""
-      document.querySelectorAll("input[name='salad']:checked").value
-    
+    document.querySelectorAll("input[name='salad']:checked").forEach(function (element, index) {
+      salad += " - " + element.value + "\n"
+    })
 
     console.log({
         name,
